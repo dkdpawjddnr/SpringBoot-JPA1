@@ -21,11 +21,15 @@ public class Order {
     @JoinColumn(name = "member_id") // 외래키 이름이 member_id가 됨.
     private Member member;
 
+    @OneToMany(mappedBy = "order") // OrderItem의 order 변수
     private List<OrderItem> orderItems = new ArrayList<>();
 
+    @OneToOne
+    @JoinColumn(name = "delivery_id")
     private Delivery delivery;
 
-    private LocalDateTime orderDate;
+    private LocalDateTime orderDate; // 주문 시간
 
+    @Enumerated(EnumType.STRING)
     private OrderStatus status; // 주문 상태 [ORDER, CANCEL]
 }
