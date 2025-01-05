@@ -14,7 +14,6 @@ import static jakarta.persistence.FetchType.LAZY;
 @Table(name = "orders")
 @Getter @Setter
 public class Order {
-
     @Id @GeneratedValue
     @Column(name = "order_id")
     private Long id;
