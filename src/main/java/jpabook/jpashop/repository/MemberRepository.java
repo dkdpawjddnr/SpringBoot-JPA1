@@ -3,15 +3,20 @@ package jpabook.jpashop.repository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jpabook.jpashop.domain.Member;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository // 자동으로 스프링 빈으로 자동 등록을 해준다.
+@RequiredArgsConstructor
 public class MemberRepository {
 
-    @PersistenceContext // JPA의 EntityManager를 주입해준다.
-    private EntityManager em;
+    private final EntityManager em;
+
+    //@RequiredArsConstructor의 사용으로 생략이 가능
+    //@PersistenceContext  JPA의 EntityManager를 주입해준다.
+    //private EntityManager em;
 
     public void save(Member member){
         em.persist(member); // persist하면 영속성컨텍스트에 Member 객체를 넣는다.
