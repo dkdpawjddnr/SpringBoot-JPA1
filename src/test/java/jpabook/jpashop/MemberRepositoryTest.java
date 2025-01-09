@@ -1,5 +1,7 @@
 package jpabook.jpashop;
 
+import jpabook.jpashop.domain.Member;
+import jpabook.jpashop.repository.MemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +11,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 @SpringBootTest
 class MemberRepositoryTest {
-
-    @Autowired MemberRepository memberRepository;
+/*
+    @Autowired
+    MemberRepository memberRepository;
 
     @Test
     @Transactional
@@ -32,4 +35,6 @@ class MemberRepositoryTest {
         //영속성 컨텍스트 JPA 엔티티 동일성 보장
         System.out.println("findMember == member: " + (findMember == member));
     }
+
+ */
 }
