@@ -51,6 +51,7 @@ public class Order {
     }
 
     //==생성 메서드==//
+    // OrderItem을 여러개 넘길 수 있음
     public static Order createOrder(Member member, Delivery delivery, OrderItem... orderItems) {
         Order order = new Order();
         order.setMember(member);

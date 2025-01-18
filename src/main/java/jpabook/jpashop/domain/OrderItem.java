@@ -39,7 +39,7 @@ public class OrderItem {
 
     //==비즈니스 로직==//
     public void cancel() {
-        getItem().addStock(count);
+        getItem().addStock(count); // 재고 수량을 원상 복구
     }
 
     //==조회 로직==//
