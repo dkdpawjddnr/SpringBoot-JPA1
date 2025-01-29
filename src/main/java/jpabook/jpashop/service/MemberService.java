@@ -32,7 +32,7 @@ public class MemberService {
 
     // 회원 전체 조회
     //@Transactional(readOnly = true) 읽기 전용 트렌젝션
-    public List<Member> findMEmbers() {
+    public List<Member> findMembers() {
         return memberRepository.findAll();
     }
     
